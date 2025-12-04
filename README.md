@@ -56,15 +56,20 @@ Private Compute: EC2 instances within Private Subnets are where the real applica
 
 ## images
 <img width="1919" height="941" alt="Screenshot 2025-12-04 150724" src="https://github.com/user-attachments/assets/a2ea4ec6-46ff-4840-9cb1-612859ba6140" />
+Test Site
 
 <img width="1918" height="948" alt="Screenshot 2025-12-04 150935" src="https://github.com/user-attachments/assets/d5b32f8a-d9a0-423c-a110-f6f997f16179" />
 
+Load Balancer
 
 <img width="1919" height="946" alt="Screenshot 2025-12-04 151055" src="https://github.com/user-attachments/assets/336d070a-aaa6-4939-8427-1acd0c67f3c4" />
+Target Group
 
 <img width="1912" height="938" alt="Screenshot 2025-12-04 151204" src="https://github.com/user-attachments/assets/ee61df98-d661-4b80-b6d5-e4d5491bc37c" />
+ASG
 
 <img width="1914" height="943" alt="Screenshot 2025-12-04 151315" src="https://github.com/user-attachments/assets/4fc509b5-a649-407b-84df-09db70e79421" />
+EC2 Instance
 
 
 # Ques4
@@ -85,11 +90,21 @@ Common Causes of Sudden Bill Increases
 ## images
 
 <img width="1919" height="936" alt="Screenshot 2025-12-04 153937" src="https://github.com/user-attachments/assets/8c8e3a1d-56ab-43a5-a35f-3d5c4f117202" />
+Cloud Watch
 
 # Ques5
 ## Brief Explanation
 
+* This architecture is designed for high availability (HA) and fault tolerance by spanning two Availability Zones (AZs) within a single AWS Region. 
+* User traffic is routed via Route 53 to CloudFront before reaching an Application Load Balancer (ALB) in public subnets. The ALB distributes traffic to an Auto Scaling       Group of EC2 instances  ensuring security and elastic compute capacity.
+* To handle 10,000 concurrent users, aggressive caching is implemented using ElastiCache for session state and frequent queries, significantly offloading the database. The   Amazon Aurora with a Read Replica in a secondary AZ to provide high-performance I/O and robust failover capabilities.
+* CloudWatch centralizes all logs and metrics for comprehensive observability.
 
+  ## image
+  <img width="973" height="791" alt="Aws_architecture drawio" src="https://github.com/user-attachments/assets/b67f1640-e8d4-4087-927a-aa06494f639f" />
+  AWS architecture
+
+  
 
 
 
