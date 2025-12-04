@@ -82,8 +82,13 @@ Common Causes of Sudden Bill Increases
 
 * Data Transfer: Unexpected high traffic (outbound data) from a public-facing application.
 
+## images
+
+<img width="1919" height="936" alt="Screenshot 2025-12-04 153937" src="https://github.com/user-attachments/assets/8c8e3a1d-56ab-43a5-a35f-3d5c4f117202" />
+
 # Ques5
 ## Brief Explanation
+
 
 
 
