@@ -23,5 +23,28 @@ route tables
 <img width="1919" height="815" alt="Screenshot 2025-12-04 132812" src="https://github.com/user-attachments/assets/1b320ac5-f918-489c-93e2-718863957ed3" />
 igw
 
-# ques2
+# Ques2
+
+## Approach & Hardening
+ 
+* I deployed an EC2 instance in the public subnet created in the previous stage.
+
+* Nginx Installation: I employed EC2 user_data to script the installation of Nginx and build a custom index.html file providing the resume details at launch time.
+
+Hardening Techniques:
+
+Only traffic on Port 80 (HTTP) is permitted by the Least Privilege Security Group. SSH (Port 22) is limited to prevent illegal access.
+
+IMDSv2: To prevent SSRF (Server-Side Request Forgery) attacks, I set metadata_options to 
+equire tokens.
+## Images
+<img width="1912" height="1005" alt="Screenshot 2025-12-04 140504" src="https://github.com/user-attachments/assets/820c15c6-7691-42a0-9d5f-6898dc94ad19" />
+websites
+<img width="1910" height="816" alt="Screenshot 2025-12-04 141454" src="https://github.com/user-attachments/assets/b22cfabb-a5d3-4e4c-9caa-87a0b6f9abfb" />
+EC2-Instance
+<img width="1906" height="1071" alt="Screenshot 2025-12-04 141605" src="https://github.com/user-attachments/assets/ee969835-ae8a-4614-8d98-99eecdff3fd7" />
+Security Group
+
+# Ques3
+
 
