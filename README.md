@@ -36,7 +36,7 @@ Hardening Techniques:
 Only traffic on Port 80 (HTTP) is permitted by the Least Privilege Security Group. SSH (Port 22) is limited to prevent illegal access.
 
 IMDSv2: To prevent SSRF (Server-Side Request Forgery) attacks, I set metadata_options to 
-equire tokens.
+enquire tokens.
 ## Images
 <img width="1912" height="1005" alt="Screenshot 2025-12-04 140504" src="https://github.com/user-attachments/assets/820c15c6-7691-42a0-9d5f-6898dc94ad19" />
 websites
@@ -46,5 +46,46 @@ EC2-Instance
 Security Group
 
 # Ques3
+## Architecture 
+
+* I implemented a highly available 2-tier architecture.
+
+Traffic Flow: The Application Load Balancer (ALB) in the public subnets receives external traffic. Requests are sent to the Target Group by the ALB.
+
+Private Compute: EC2 instances within Private Subnets are where the real application operates. Because these instances don't have public IPs, security is improved.
+
+## images
+<img width="1919" height="941" alt="Screenshot 2025-12-04 150724" src="https://github.com/user-attachments/assets/a2ea4ec6-46ff-4840-9cb1-612859ba6140" />
+
+<img width="1918" height="948" alt="Screenshot 2025-12-04 150935" src="https://github.com/user-attachments/assets/d5b32f8a-d9a0-423c-a110-f6f997f16179" />
+
+
+<img width="1919" height="946" alt="Screenshot 2025-12-04 151055" src="https://github.com/user-attachments/assets/336d070a-aaa6-4939-8427-1acd0c67f3c4" />
+
+<img width="1912" height="938" alt="Screenshot 2025-12-04 151204" src="https://github.com/user-attachments/assets/ee61df98-d661-4b80-b6d5-e4d5491bc37c" />
+
+<img width="1914" height="943" alt="Screenshot 2025-12-04 151315" src="https://github.com/user-attachments/assets/4fc509b5-a649-407b-84df-09db70e79421" />
+
+
+# Ques4
+
+## Brief Explanation
+Why Cost Monitoring is Important For beginners, cloud costs can be deceptive because resources are billed by the second or hour. Leaving a powerful instance running or forgetting about unattached storage volumes can lead to unexpected bills ranging from hundreds to thousands of dollars. Monitoring ensures you are notified before the budget is blown, not after the invoice arrives.
+
+Common Causes of Sudden Bill Increases
+
+* Forgotten Resources: Leaving EC2 instances or RDS databases running 24/7 when they are not needed.
+
+* Unattached EBS Volumes: Deleting an EC2 instance but forgetting to delete the attached storage volume.
+
+* Elastic IPs: Keeping an Elastic IP reserved but not attached to a running instance (AWS charges for idle static IPs).
+
+* Data Transfer: Unexpected high traffic (outbound data) from a public-facing application.
+
+# Ques5
+## Brief Explanation
+
+
+
 
 
